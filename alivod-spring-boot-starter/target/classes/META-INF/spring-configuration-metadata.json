@@ -1,0 +1,100 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.dw.vod.starter.properties.VideoProperties",
+      "name": "alicustom.alivideo",
+      "type": "com.dw.vod.starter.properties.VideoProperties"
+    },
+    {
+      "sourceType": "com.dw.vod.starter.properties.RedisProperties",
+      "name": "alicustom.redisprefix",
+      "type": "com.dw.vod.starter.properties.RedisProperties"
+    },
+    {
+      "sourceType": "com.dw.vod.starter.properties.ThreadPoolProperties",
+      "name": "alicustom.threadpool",
+      "type": "com.dw.vod.starter.properties.ThreadPoolProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.dw.vod.starter.properties.VideoProperties",
+      "name": "alicustom.alivideo.access-key-id",
+      "description": "阿里accessKeyId",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.dw.vod.starter.properties.VideoProperties",
+      "name": "alicustom.alivideo.access-key-secret",
+      "description": "阿里accessKeySecret",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.dw.vod.starter.properties.VideoProperties",
+      "defaultValue": false,
+      "name": "alicustom.alivideo.print-progress",
+      "description": "上传进度打印",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.dw.vod.starter.properties.VideoProperties",
+      "defaultValue": false,
+      "name": "alicustom.alivideo.sync-upload",
+      "description": "开启同步上传,默认使用异步上传",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.dw.vod.starter.properties.VideoProperties",
+      "defaultValue": ".mp4",
+      "name": "alicustom.alivideo.video-suffix",
+      "description": "统一视频后缀",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.dw.vod.starter.properties.RedisProperties",
+      "name": "alicustom.redisprefix.video-detail-save-id",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.dw.vod.starter.properties.RedisProperties",
+      "name": "alicustom.redisprefix.video-sole-id",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.dw.vod.starter.properties.ThreadPoolProperties",
+      "defaultValue": 5,
+      "name": "alicustom.threadpool.core-pool-size",
+      "description": "设置核心线程数",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.dw.vod.starter.properties.ThreadPoolProperties",
+      "defaultValue": 60,
+      "name": "alicustom.threadpool.keep-alive-seconds",
+      "description": "设置线程活跃时间（秒）",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.dw.vod.starter.properties.ThreadPoolProperties",
+      "defaultValue": 10,
+      "name": "alicustom.threadpool.max-pool-size",
+      "description": "设置最大线程数",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.dw.vod.starter.properties.ThreadPoolProperties",
+      "defaultValue": 20,
+      "name": "alicustom.threadpool.queue-capacity",
+      "description": "设置队列容量",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.dw.vod.starter.properties.ThreadPoolProperties",
+      "defaultValue": "Ali-Video-Thread-",
+      "name": "alicustom.threadpool.thread-name-prefix",
+      "description": "设置默认线程名称",
+      "type": "java.lang.String"
+    }
+  ]
+}
