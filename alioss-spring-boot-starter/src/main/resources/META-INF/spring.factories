@@ -1,2 +1,2 @@
 #-------starter自动装配---------
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.dw.img.starter.config.ImgConfig,com.dw.img.starter.config.ImgCompressConfig
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.silwings.img.starter.config.ImgConfig,com.silwings.img.starter.config.ImgCompressConfig

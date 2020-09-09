@@ -12,8 +12,8 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.8.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <version>2.1.12.RELEASE</version>
+        <relativePath/>
     </parent>
     <groupId>com.silwings</groupId>
     <artifactId>aliutils-spring-boot-starter</artifactId>
@@ -90,8 +90,8 @@
 
         <!--自定义阿里视频上传依赖-->
         <dependency>
-            <groupId>dw-cloud</groupId>
-            <artifactId>dw-cloud-upload</artifactId>
+            <groupId>com.silwings</groupId>
+            <artifactId>silwings-aliyun-upload</artifactId>
             <version>1.0</version>
         </dependency>
 
