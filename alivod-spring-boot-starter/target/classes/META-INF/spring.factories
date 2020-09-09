@@ -1,2 +1,0 @@
-#-------starter自动装配---------
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.dw.vod.starter.config.VideoConfig,com.dw.vod.starter.config.ThreadPoolConfig
