@@ -1,6 +1,8 @@
 package com.silwings.vod.starter.config;
 
+import com.silwings.common.utils.RedisUtil;
 import com.silwings.vod.starter.controller.VodVideoController;
+import com.silwings.vod.starter.controller.impl.AsyncVodVodVideoController;
 import com.silwings.vod.starter.controller.impl.SyncVodController;
 import com.silwings.vod.starter.factory.AbstractFactory;
 import com.silwings.vod.starter.factory.VideoFactory;
@@ -12,8 +14,6 @@ import com.silwings.vod.starter.service.VideoUpLoader;
 import com.silwings.vod.starter.service.impl.AsyncVideoServiceImpl;
 import com.silwings.vod.starter.service.impl.DefaultVideoUpLoader;
 import com.silwings.vod.starter.service.impl.VideoInfoServiceImpl;
-import com.silwings.vod.starter.controller.impl.AsyncVodVodVideoController;
-import com.silwings.common.utils.RedisUtil;
 import com.silwings.vod.starter.utils.VideoTranscodeUtil;
 import com.silwings.vod.starter.utils.VideoUtils;
 import org.slf4j.Logger;

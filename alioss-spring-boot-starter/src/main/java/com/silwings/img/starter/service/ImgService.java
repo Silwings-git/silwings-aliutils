@@ -10,14 +10,14 @@ import org.springframework.web.multipart.MultipartFile;
  */
 public interface ImgService {
 
-    String createNewFileName(MultipartFile upfile);
+    String createNewFileName(MultipartFile upFile);
 
     /**
-     * @param upfile 文件上传
+     * @param upFile 文件上传
      * @param compressLevel 压缩等级
      * @return
      * @throws RuntimeException
      */
-     String upFile(MultipartFile upfile, Integer compressLevel,String fileName) throws RuntimeException;
+     String upFile(MultipartFile upFile, Integer compressLevel,String fileName) throws RuntimeException;
 
 }

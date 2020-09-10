@@ -1,10 +1,10 @@
 package com.silwings.vod.starter.controller.impl;
 
+import com.silwings.common.entity.R;
 import com.silwings.vod.starter.controller.VodVideoController;
 import com.silwings.vod.starter.pojo.vod.dto.VideoMessageDto;
 import com.silwings.vod.starter.pojo.vod.vo.VideoMessageVo;
 import com.silwings.vod.starter.service.VideoService;
-import com.silwings.common.entity.R;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -36,7 +36,7 @@ public class AsyncVodVodVideoController implements VodVideoController {
      * author: 崔益翔
      *
      * @param size
-     * @return com.dw.cloud.R
+     * @return R
      */
     @Override
     public R getUpLoadHashKey(String size) {
@@ -54,7 +54,7 @@ public class AsyncVodVodVideoController implements VodVideoController {
      * author: 崔益翔
      *
      * @param file 文件
-     * @return com.dw.cloud.R 文件videoId和url
+     * @return R 文件videoId和url
      */
     @Override
     public R videoUpload(String hashKey, MultipartFile file) {
@@ -79,7 +79,7 @@ public class AsyncVodVodVideoController implements VodVideoController {
      * author: 崔益翔
      *
      * @param hashKey 获取文件上传状态的请求码
-     * @return com.dw.cloud.R
+     * @return R
      */
     @Override
     public R getUpStatus(String hashKey) {

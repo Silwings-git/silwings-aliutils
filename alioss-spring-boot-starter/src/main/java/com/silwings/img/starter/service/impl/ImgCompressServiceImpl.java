@@ -23,14 +23,14 @@ public class ImgCompressServiceImpl implements ImgCompressService {
     private static final Logger logger = LoggerFactory.getLogger(ImgCompressServiceImpl.class);
 
     @Override
-    public ImgInputStreamDto imgCompress(MultipartFile upfile, String newFileName, Float compressLevelValue) {
+    public ImgInputStreamDto imgCompress(MultipartFile upFile, String newFileName, Float compressLevelValue) {
         logger.info("压缩比例" + compressLevelValue + ",开始压缩图片...");
-        long size = upfile.getSize();
+        long size = upFile.getSize();
         File file = null;
         InputStream input = null;
         FileInputStream inputStream = null;
         try {
-            input = upfile.getInputStream();
+            input = upFile.getInputStream();
 //        图片压缩
             file = new File(newFileName);
             Thumbnails.of(input)

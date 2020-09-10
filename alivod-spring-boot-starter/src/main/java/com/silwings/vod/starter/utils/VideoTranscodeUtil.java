@@ -1,9 +1,9 @@
 package com.silwings.vod.starter.utils;
 
-import com.silwings.vod.starter.pojo.vod.dto.FileInputStreamDto;
-import com.silwings.vod.starter.properties.VideoProperties;
 import com.silwings.common.utils.MultipartFileToFile;
 import com.silwings.common.utils.SnowFlake;
+import com.silwings.vod.starter.pojo.vod.dto.FileInputStreamDto;
+import com.silwings.vod.starter.properties.VideoProperties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

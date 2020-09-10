@@ -24,9 +24,9 @@ import java.util.concurrent.ThreadPoolExecutor;
 @Configuration
 @EnableConfigurationProperties({ThreadPoolProperties.class, VideoProperties.class})
 @ConditionalOnProperty(
-        prefix = "alicustom",
-        name = "openvod",
-        havingValue = "true"
+        prefix = "alicustom.alivideo",
+        name = "sync-upload",
+        havingValue = "false"
 )
 @EnableAsync
 public class ThreadPoolConfig {

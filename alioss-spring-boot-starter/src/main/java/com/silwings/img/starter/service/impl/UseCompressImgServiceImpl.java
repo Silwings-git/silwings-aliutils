@@ -34,7 +34,7 @@ public class UseCompressImgServiceImpl extends DefaultImgServiceImpl implements 
     private CompressLevelMappingProperties compressLevelMappingProperties;
 
     @Override
-    public String upFile(MultipartFile upfile, Integer compressLevel, String fileName) throws RuntimeException {
+    public String upFile(MultipartFile upFile, Integer compressLevel, String fileName) throws RuntimeException {
 //        选择压缩比例
         if (null == compressLevel) {
             compressLevel = 0;
@@ -44,7 +44,7 @@ public class UseCompressImgServiceImpl extends DefaultImgServiceImpl implements 
         String url = null;
         try {
 //          进行图片压缩
-            imgInputStreamDto = ossImgCompressService.imgCompress(upfile, fileName, compressLevelValue);
+            imgInputStreamDto = ossImgCompressService.imgCompress(upFile, fileName, compressLevelValue);
 //          图片上传
             url = ossImgUpLoader.upFile(imgInputStreamDto.getInputStream(), fileName);
 //          删除缓存

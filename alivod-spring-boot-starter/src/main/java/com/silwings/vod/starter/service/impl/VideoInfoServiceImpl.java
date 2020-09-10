@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * @author CuiYiXiang
  * @Classname VideoInfoServiceImpl
- * @Description TODO
+ * @Description 视频信息服务.用户可以在需要使用的地方通过注入的方式获取该类对象,进行视频操作
  * @Date 2020/8/2
  */
 public class VideoInfoServiceImpl implements VideoInfoService {

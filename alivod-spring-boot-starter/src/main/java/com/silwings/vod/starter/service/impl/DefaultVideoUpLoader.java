@@ -3,18 +3,17 @@ package com.silwings.vod.starter.service.impl;
 import com.aliyun.vod.upload.impl.UploadVideoImpl;
 import com.aliyun.vod.upload.req.UploadStreamRequest;
 import com.aliyun.vod.upload.resp.UploadStreamResponse;
+import com.silwings.common.utils.JsonUtils;
+import com.silwings.common.utils.RedisUtil;
 import com.silwings.vod.starter.pojo.vod.dto.FileInputStreamDto;
 import com.silwings.vod.starter.pojo.vod.dto.VideoMessageDto;
 import com.silwings.vod.starter.properties.RedisProperties;
 import com.silwings.vod.starter.properties.VideoProperties;
 import com.silwings.vod.starter.service.VideoUpLoader;
-import com.silwings.common.utils.JsonUtils;
-import com.silwings.common.utils.RedisUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Async;
 
 import java.io.File;
 import java.io.InputStream;
@@ -22,7 +21,7 @@ import java.io.InputStream;
 /**
  * @author CuiYiXiang
  * @Classname DefaultVideoUpLoader
- * @Description TODO
+ * @Description 视频上传器, 只负责上传视频与异步缓存赋值
  * @Date 2020/7/31
  */
 public class DefaultVideoUpLoader implements VideoUpLoader {
@@ -40,7 +39,6 @@ public class DefaultVideoUpLoader implements VideoUpLoader {
     private VideoProperties videoProperties;
 
     @Override
-    @Async("vodTaskExecutor")
     public void asyncExecuteVideoUpload(FileInputStreamDto fileInputStreamDto, VideoMessageDto videoMessage, String hashKey) {
         try {
 //          初始化上传状态
@@ -54,15 +52,15 @@ public class DefaultVideoUpLoader implements VideoUpLoader {
         } finally {
 //          删除缓存
             File file = fileInputStreamDto.getFile();
-            if (null == file) {
-                logger.info("无缓存需要清除");
-            } else {
+            if (null != file) {
                 boolean delete = file.delete();
                 if (delete) {
                     logger.info("新文件缓存清理成功");
                 } else {
                     logger.error("新文件缓存清理失败");
                 }
+            } else {
+                logger.info("没有缓存文件");
             }
         }
     }

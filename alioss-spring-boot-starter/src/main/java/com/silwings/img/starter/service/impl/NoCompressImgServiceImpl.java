@@ -13,7 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 public class NoCompressImgServiceImpl extends DefaultImgServiceImpl implements ImgService {
 
     @Override
-    public String upFile(MultipartFile upfile, Integer compressLevel, String fileName) throws RuntimeException {
-        return super.upFile(upfile, compressLevel, fileName);
+    public String upFile(MultipartFile upFile, Integer compressLevel, String fileName) throws RuntimeException {
+        return super.upFile(upFile, compressLevel, fileName);
     }
 }

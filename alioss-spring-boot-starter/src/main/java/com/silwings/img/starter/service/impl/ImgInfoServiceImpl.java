@@ -21,6 +21,14 @@ public class ImgInfoServiceImpl implements ImgInfoService {
     @Autowired
     private ImgUpLoader ossImgUpLoader;
 
+    /**
+     * description: 批量删除图片
+     * version: 1.0
+     * date: 2020/9/10 19:44
+     * author: 崔益翔
+     * @param imgs 图片路径.包含文件后缀在内的完整路径，例如abc/efg/123.jpg。
+     * @return void
+     */
     @Override
     public void deleteImg(List<String> imgs) {
         boolean delete = ossImgUpLoader.delete(imgs);

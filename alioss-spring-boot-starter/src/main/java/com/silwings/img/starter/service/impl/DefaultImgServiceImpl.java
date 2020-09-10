@@ -27,12 +27,12 @@ public class DefaultImgServiceImpl implements ImgService {
      * date: 2020/8/2 17:05
      * author: 崔益翔
      *
-     * @param upfile
+     * @param upFile
      * @return java.lang.String
      */
     @Override
-    public String createNewFileName(MultipartFile upfile) {
-        String fileName = upfile.getOriginalFilename();
+    public String createNewFileName(MultipartFile upFile) {
+        String fileName = upFile.getOriginalFilename();
         String substring = fileName.substring(fileName.lastIndexOf("/") + 1);
         String newName = substring.substring(substring.lastIndexOf("\\") + 1);
         //新文件名
@@ -55,10 +55,10 @@ public class DefaultImgServiceImpl implements ImgService {
     }
 
     @Override
-    public String upFile(MultipartFile upfile, Integer compressLevel,String fileName) throws RuntimeException {
+    public String upFile(MultipartFile upFile, Integer compressLevel,String fileName) throws RuntimeException {
         String url = null;
         try {
-            InputStream input = upfile.getInputStream();
+            InputStream input = upFile.getInputStream();
             url = ossImgUpLoader.upFile(input, fileName);
         } catch (IOException e) {
             e.printStackTrace();

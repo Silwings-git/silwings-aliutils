@@ -23,7 +23,7 @@ public class OssImgControllerImpl implements OssImgController {
     private ImgService ossImgService;
 
     @Override
-    public R uploadImg(MultipartFile upfile, Integer compressLevel){
+    public R<String> uploadImg(MultipartFile upfile, Integer compressLevel){
         logger.info("开始图片上传...");
         String strBackUrl = null;
         try {

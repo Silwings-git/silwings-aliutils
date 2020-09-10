@@ -1,10 +1,10 @@
 package com.silwings.vod.starter.service.impl;
 
-import com.silwings.vod.starter.pojo.vod.dto.VideoMessageDto;
-import com.silwings.vod.starter.properties.RedisProperties;
 import com.silwings.common.utils.JsonUtils;
 import com.silwings.common.utils.RedisUtil;
 import com.silwings.common.utils.SnowFlake;
+import com.silwings.vod.starter.pojo.vod.dto.VideoMessageDto;
+import com.silwings.vod.starter.properties.RedisProperties;
 import com.silwings.vod.starter.utils.VideoTranscodeUtil;
 import com.silwings.vod.starter.utils.VideoUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -17,7 +17,7 @@ import java.util.UUID;
 /**
  * @author CuiYiXiang
  * @Classname DefaultVideoService
- * @Description TODO
+ * @Description 视频服务接口的默认实现类
  * @Date 2020/7/30
  */
 public class DefaultVideoService {
@@ -41,7 +41,7 @@ public class DefaultVideoService {
      * author: 崔益翔
      *
      * @param size
-     * @return com.dw.cloud.R
+     * @return R
      */
     public String getUpLoadHashKey(String size) {
         return size + System.currentTimeMillis() + UUID.randomUUID();

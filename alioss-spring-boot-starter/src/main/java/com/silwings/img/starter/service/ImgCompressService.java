@@ -12,5 +12,5 @@ import org.springframework.web.multipart.MultipartFile;
  */
 public interface ImgCompressService {
 
-    ImgInputStreamDto imgCompress(MultipartFile upfile, String newFileName, Float compressLevelValue);
+    ImgInputStreamDto imgCompress(MultipartFile upFile, String newFileName, Float compressLevelValue);
 }
