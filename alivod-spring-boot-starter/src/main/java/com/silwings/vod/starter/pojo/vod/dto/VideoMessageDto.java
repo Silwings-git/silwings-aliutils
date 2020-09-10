@@ -129,7 +129,7 @@ public class VideoMessageDto implements Serializable {
      * author: 崔益翔
      *
      * @param videoId 云端视频id
-     * @return com.dw.cloud.dto.VideoMessageDto
+     * @return com.silwings.vod.starter.pojo.vod.dto.VideoMessageDto
      */
     public VideoMessageDto setVideoId(String videoId) {
         this.videoId = videoId;
@@ -143,7 +143,7 @@ public class VideoMessageDto implements Serializable {
      * author: 崔益翔
      *
      * @param url 云端视频url
-     * @return com.dw.cloud.dto.VideoMessageDto
+     * @return com.silwings.vod.starter.pojo.vod.dto.VideoMessageDto
      */
     public VideoMessageDto setUrl(String url) {
         this.url = url;
@@ -157,7 +157,7 @@ public class VideoMessageDto implements Serializable {
      * author: 崔益翔
      *
      * @param playAuth 云端视频凭证
-     * @return com.dw.cloud.dto.VideoMessageDto
+     * @return com.silwings.vod.starter.pojo.vod.dto.VideoMessageDto
      */
     public VideoMessageDto setPlayAuth(String playAuth) {
         this.playAuth = playAuth;
