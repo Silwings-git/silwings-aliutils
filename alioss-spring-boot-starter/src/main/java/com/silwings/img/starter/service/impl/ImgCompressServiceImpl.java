@@ -22,6 +22,16 @@ import java.io.InputStream;
 public class ImgCompressServiceImpl implements ImgCompressService {
     private static final Logger logger = LoggerFactory.getLogger(ImgCompressServiceImpl.class);
 
+    /**
+     * description: 根据压缩等级对图片进行压缩
+     * version: 1.0
+     * date: 2020/9/11 8:06
+     * author: 崔益翔
+     * @param upFile 需要压缩的文件
+     * @param newFileName 文件名称
+     * @param compressLevelValue 压缩等级
+     * @return com.silwings.img.starter.pojo.dto.ImgInputStreamDto 文件流的封装
+     */
     @Override
     public ImgInputStreamDto imgCompress(MultipartFile upFile, String newFileName, Float compressLevelValue) {
         logger.info("压缩比例" + compressLevelValue + ",开始压缩图片...");

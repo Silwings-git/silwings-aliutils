@@ -33,6 +33,16 @@ public class UseCompressImgServiceImpl extends DefaultImgServiceImpl implements 
     @Autowired
     private CompressLevelMappingProperties compressLevelMappingProperties;
 
+    /**
+     * description: 根据压缩等级压缩并上传图片
+     * version: 1.0
+     * date: 2020/9/11 8:09
+     * author: 崔益翔
+     * @param upFile
+     * @param compressLevel
+     * @param fileName
+     * @return java.lang.String
+     */
     @Override
     public String upFile(MultipartFile upFile, Integer compressLevel, String fileName) throws RuntimeException {
 //        选择压缩比例

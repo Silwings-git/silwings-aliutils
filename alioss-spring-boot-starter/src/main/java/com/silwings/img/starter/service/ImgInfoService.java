@@ -14,8 +14,8 @@ public interface ImgInfoService {
      * version: 1.0
      * date: 2020/8/2 22:15
      * author: 崔益翔
-     * @param imgs 需要删除的图片的key集合.key为图片路径.包含文件后缀在内的完整路径，例如abc/efg/123.jpg。
+     * @param keys 需要删除的图片的key集合.key为图片路径.包含文件后缀在内的完整路径，例如abc/efg/123.jpg。
      * @return void
      */
-    void deleteImg(List<String> imgs);
+    void deleteImg(List<String> keys);
 }
