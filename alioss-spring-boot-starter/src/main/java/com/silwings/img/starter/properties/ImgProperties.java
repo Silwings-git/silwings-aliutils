@@ -5,7 +5,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 /**
  * @author CuiYiXiang
  * @Classname ImgProperties
- * @Description TODO
+ * @Description 图片服务基本配置
  * @Date 2020/8/2
  */
 @ConfigurationProperties(prefix = "alicustom.aliimg")

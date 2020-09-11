@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * @author CuiYiXiang
  * @Classname CompressLevelMappingProperties
- * @Description TODO
+ * @Description 压缩等级配置
  * @Date 2020/8/2
  */
 @ConfigurationProperties(prefix = "alicustom.compresslevel")

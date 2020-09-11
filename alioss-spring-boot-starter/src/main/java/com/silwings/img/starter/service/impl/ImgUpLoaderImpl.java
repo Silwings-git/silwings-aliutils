@@ -63,12 +63,12 @@ public class ImgUpLoaderImpl implements ImgUpLoader {
     }
 
     @Override
-    public boolean delete(List<String> imgs) {
+    public boolean delete(List<String> keys) {
         OSSClient ossClient = initOssClient();
         try {
             // 文件存储入OSS，Object的名称为fileKey。详细请参看“SDK手册 > Java-SDK > 上传文件”。
             // 链接地址是：https://help.aliyun.com/document_detail/oss/sdk/java-sdk/upload_object.html?spm=5176.docoss/user_guide/upload_object
-            DeleteObjectsResult deleteObjectsResult = ossClient.deleteObjects(new DeleteObjectsRequest(imgProperties.getBucketName()).withKeys(imgs));
+            DeleteObjectsResult deleteObjectsResult = ossClient.deleteObjects(new DeleteObjectsRequest(imgProperties.getBucketName()).withKeys(keys));
 //            获取已删除的文件信息
 //            List<String> deletedObjects = deleteObjectsResult.getDeletedObjects();
             return true;

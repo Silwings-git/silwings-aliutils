@@ -26,7 +26,7 @@ public class ImgInfoServiceImpl implements ImgInfoService {
      * version: 1.0
      * date: 2020/9/10 19:44
      * author: 崔益翔
-     * @param imgs 图片路径.包含文件后缀在内的完整路径，例如abc/efg/123.jpg。
+     * @param imgs 需要删除的图片的key集合.key为图片路径.包含文件后缀在内的完整路径，例如abc/efg/123.jpg。
      * @return void
      */
     @Override

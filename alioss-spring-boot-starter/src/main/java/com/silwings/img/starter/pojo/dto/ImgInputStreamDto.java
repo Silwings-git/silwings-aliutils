@@ -6,7 +6,7 @@ import java.io.InputStream;
 /**
  * @author CuiYiXiang
  * @Classname ImgInputStreamDto
- * @Description TODO
+ * @Description 封账文件与其输入流
  * @Date 2020/8/2
  */
 public class ImgInputStreamDto {

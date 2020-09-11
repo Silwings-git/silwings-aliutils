@@ -13,7 +13,7 @@ import java.util.Random;
 /**
  * @author CuiYiXiang
  * @Classname DefaultImgServiceImpl
- * @Description TODO
+ * @Description 默认图片服务实现
  * @Date 2020/8/2
  */
 public class DefaultImgServiceImpl implements ImgService {
