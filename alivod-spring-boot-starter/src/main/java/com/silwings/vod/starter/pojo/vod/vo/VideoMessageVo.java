@@ -6,7 +6,7 @@ import org.springframework.beans.BeanUtils;
 /**
  * @author CuiYiXiang
  * @Classname VideoMessageVo
- * @Description TODO
+ * @Description 返回信息
  * @Date 2020/7/30
  */
 public class VideoMessageVo extends VideoMessageDto {

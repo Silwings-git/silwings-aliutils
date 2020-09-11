@@ -38,11 +38,19 @@ public class DefaultVideoUpLoader implements VideoUpLoader {
     @Autowired
     private VideoProperties videoProperties;
 
+    /**
+     * description: 异步上传视频
+     * version: 1.0
+     * date: 2020/9/11 8:16
+     * author: 崔益翔
+     * @param fileInputStreamDto 文件与流信息
+     * @param videoMessage 视频信息
+     * @param hashKey 资源标识符
+     * @return void
+     */
     @Override
     public void asyncExecuteVideoUpload(FileInputStreamDto fileInputStreamDto, VideoMessageDto videoMessage, String hashKey) {
         try {
-//          初始化上传状态
-            vodRedisUtil.set(redisProperties.getVideoSoleId() + hashKey, VideoMessageDto.VIDEO_UPLOAD_WAIT);
 //          执行文件上传
             VideoMessageDto videoMessageDto = this.executeVideoUpload(fileInputStreamDto.getInputStream(), videoMessage);
 //          设置上传状态信息

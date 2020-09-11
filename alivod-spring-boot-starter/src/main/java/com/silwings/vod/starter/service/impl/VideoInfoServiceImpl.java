@@ -39,6 +39,14 @@ public class VideoInfoServiceImpl implements VideoInfoService {
         return vodVideoUtils.getVideoPlayUrlAndCover(videoId);
     }
 
+    /**
+     * description: 根据视频id集合获取视频封面
+     * version: 1.0
+     * date: 2020/9/11 8:19
+     * author: 崔益翔
+     * @param videoIds
+     * @return java.util.HashMap<java.lang.String,java.lang.String>
+     */
     @Override
     public HashMap<String, String> getVideoCoverUrlByList(List<String> videoIds) {
         GetVideoInfosResponse videoInfos = null;
@@ -62,6 +70,14 @@ public class VideoInfoServiceImpl implements VideoInfoService {
         return videoIdCoverUrlMap;
     }
 
+    /**
+     * description: 根据视频id获取播放凭证
+     * version: 1.0
+     * date: 2020/9/11 8:20
+     * author: 崔益翔
+     * @param videoId
+     * @return java.lang.String
+     */
     @Override
     public String getPlayAuth(String videoId){
         String videoPlayAuth = null;
@@ -74,6 +90,14 @@ public class VideoInfoServiceImpl implements VideoInfoService {
         return videoPlayAuth;
     }
 
+    /**
+     * description: 根据视频id删除视频
+     * version: 1.0
+     * date: 2020/9/11 8:20
+     * author: 崔益翔
+     * @param videoId
+     * @return void
+     */
     @Override
     public void delVideoByVideoId(String videoId){
         try {
@@ -86,6 +110,14 @@ public class VideoInfoServiceImpl implements VideoInfoService {
         logger.info("删除视频成功");
     }
 
+    /**
+     * description: 批量删除视频
+     * version: 1.0
+     * date: 2020/9/11 8:20
+     * author: 崔益翔
+     * @param videoIds
+     * @return void
+     */
     @Override
     public void delVideoByVideoId(List<String> videoIds){
         try {

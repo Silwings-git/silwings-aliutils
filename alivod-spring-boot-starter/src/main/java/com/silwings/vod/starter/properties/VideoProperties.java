@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 /**
  * @author CuiYiXiang
  * @Classname VideoProperties
- * @Description TODO
+ * @Description 视频基本配置
  * @Date 2020/7/29
  */
 @ConfigurationProperties(prefix = "alicustom.alivideo")

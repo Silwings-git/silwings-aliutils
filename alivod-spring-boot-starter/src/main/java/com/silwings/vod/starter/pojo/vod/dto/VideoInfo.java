@@ -3,7 +3,7 @@ package com.silwings.vod.starter.pojo.vod.dto;
 /**
  * @author CuiYiXiang
  * @Classname VideoInfo
- * @Description TODO
+ * @Description 视频信息
  * @Date 2020/8/2
  */
 public class VideoInfo {

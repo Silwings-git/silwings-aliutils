@@ -5,7 +5,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 /**
  * @author CuiYiXiang
  * @Classname ThreadPoolProperties
- * @Description TODO
+ * @Description 线程池配置
  * @Date 2020/7/31
  */
 @ConfigurationProperties(prefix = "alicustom.threadpool")

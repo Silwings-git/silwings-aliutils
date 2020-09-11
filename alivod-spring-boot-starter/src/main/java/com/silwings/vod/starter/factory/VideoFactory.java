@@ -18,6 +18,14 @@ public class VideoFactory implements AbstractFactory {
     private static final Logger logger = LoggerFactory.getLogger(VideoFactory.class);
 
 
+    /**
+     * description: 根据配置文件构建不同视频服务
+     * version: 1.0
+     * date: 2020/9/11 8:12
+     * author: 崔益翔
+     * @param videoProperties
+     * @return com.silwings.vod.starter.service.VideoService
+     */
     @Override
     public VideoService createVideoService(VideoProperties videoProperties) {
 //        工具不同参数创建不同的VideoService

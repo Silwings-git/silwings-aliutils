@@ -6,7 +6,7 @@ import java.io.InputStream;
 /**
  * @author CuiYiXiang
  * @Classname FileInputStreamDto
- * @Description TODO
+ * @Description 视频文件与流发封装体
  * @Date 2020/8/2
  */
 public class FileInputStreamDto {

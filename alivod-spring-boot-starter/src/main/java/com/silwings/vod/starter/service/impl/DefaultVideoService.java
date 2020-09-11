@@ -48,7 +48,15 @@ public class DefaultVideoService {
     }
 
 
-
+    /**
+     * description: 获取视频状态
+     * version: 1.0
+     * date: 2020/9/11 8:16
+     * author: 崔益翔
+     *
+     * @param hashKey 资源单位符
+     * @return com.silwings.vod.starter.pojo.vod.dto.VideoMessageDto
+     */
     public VideoMessageDto getUpStatus(String hashKey) {
         VideoMessageDto videoMessageDto = null;
 //        查询缓存中的该视频状态

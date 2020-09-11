@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 /**
  * @author CuiYiXiang
  * @Classname RedisProperties
- * @Description TODO
+ * @Description Redis缓存配置
  * @Date 2020/7/31
  */
 @ConfigurationProperties(prefix = "alicustom.redisprefix")

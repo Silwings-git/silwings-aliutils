@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * @author CuiYiXiang
  * @Classname VideoMessageDto
- * @Description TODO
+ * @Description 视频信息
  * @Date 2020/7/1
  */
 public class VideoMessageDto implements Serializable {

@@ -1,7 +1,9 @@
 package com.silwings.vod.starter.service.impl;
 
+import com.silwings.common.utils.RedisUtil;
 import com.silwings.vod.starter.pojo.vod.dto.FileInputStreamDto;
 import com.silwings.vod.starter.pojo.vod.dto.VideoMessageDto;
+import com.silwings.vod.starter.properties.RedisProperties;
 import com.silwings.vod.starter.properties.VideoProperties;
 import com.silwings.vod.starter.service.VideoService;
 import com.silwings.vod.starter.service.VideoUpLoader;
@@ -15,8 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 /**
  * @author CuiYiXiang
  * @Classname AsyncVideoServiceImpl
- * 异步上传服务.
- * @Description TODO
+ * @Description 异步上传服务.
  * @Date 2020/7/29
  */
 public class AsyncVideoServiceImpl extends DefaultVideoService implements VideoService {
@@ -28,7 +29,11 @@ public class AsyncVideoServiceImpl extends DefaultVideoService implements VideoS
 
     @Autowired
     private VideoProperties videoProperties;
+    @Autowired
+    private RedisUtil vodRedisUtil;
 
+    @Autowired
+    private RedisProperties redisProperties;
 
     public AsyncVideoServiceImpl() {
         logger.info("异步上传服务初始化中...");
@@ -41,7 +46,7 @@ public class AsyncVideoServiceImpl extends DefaultVideoService implements VideoS
      * description:
      * 上传视频,并将视频上传状态存储到redis数据库
      * 注意:
-     * 统一使用mp4格式
+     * 默认统一使用mp4格式
      * version: 1.0
      * date: 2020/7/30 10:40
      * author: 崔益翔
@@ -63,6 +68,8 @@ public class AsyncVideoServiceImpl extends DefaultVideoService implements VideoS
 //        视频信息
         VideoMessageDto videoMessage = this.creatNewFileName(videoProperties.getVideoSuffix());
         logger.info("线程：" + Thread.currentThread().getName() + "准备调用文件上传");
+//          初始化上传状态
+        vodRedisUtil.set(redisProperties.getVideoSoleId() + hashKey, VideoMessageDto.VIDEO_UPLOAD_WAIT);
 //        执行视频文件上传
         vodVideoUpLoader.asyncExecuteVideoUpload(fileInputStreamDto, videoMessage, hashKey);
 
