@@ -25,7 +25,7 @@
    2. 打包命令:
 
       ```
-      mvn install:install-file -Dfile=G:\ali\jar\aliyun-java-vod-upload-1.4.12.jar  -DgroupId=com.silwings -DartifactId=silwings-aliyun-upload -Dversion=1.0 -Dpackaging=jar
+      mvn install:install-file -Dfile=E:\Idea-workspace\silwings\aliutils-spring-boot-starter\aliyun-java-vod-upload-1.4.12.jar  -DgroupId=com.silwings -DartifactId=silwings-aliyun-upload -Dversion=1.0 -Dpackaging=jar
       ```
 
 ### OSS组件的使用:
