@@ -43,9 +43,10 @@ public class DefaultVideoUpLoader implements VideoUpLoader {
      * version: 1.0
      * date: 2020/9/11 8:16
      * author: 崔益翔
+     *
      * @param fileInputStreamDto 文件与流信息
-     * @param videoMessage 视频信息
-     * @param hashKey 资源标识符
+     * @param videoMessage       视频信息
+     * @param hashKey            资源标识符
      * @return void
      */
     @Override
@@ -134,7 +135,7 @@ public class DefaultVideoUpLoader implements VideoUpLoader {
     private void setVideoMessageToRedis(VideoMessageDto videoMessage, String hashKey) {
         if (StringUtils.isEmpty(videoMessage.getVideoId())) {
 //            说明文件上传失败
-            vodRedisUtil.set(redisProperties.getVideoSoleId(), VideoMessageDto.VIDEO_UPLOAD_FAIL);
+            vodRedisUtil.set(redisProperties.getVideoSoleId() + hashKey, VideoMessageDto.VIDEO_UPLOAD_FAIL);
             logger.error("线程：" + Thread.currentThread().getName() + "视频上传失败");
             return;
         }
